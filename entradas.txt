@@ -1,0 +1,5 @@
+./game_of_life --pattern glider --rows 160 --cols 200
+./game_of_life --pattern blinker --rows 160 --cols 200 --delay 300
+./game_of_life --pattern pulsar --rows 160 --cols 200 --delay 150
+./game_of_life --pattern gosper --rows 160 --cols 200 --gens 500
+./game_of_life --pattern random --rows 256 --cols 512 --seed 123
