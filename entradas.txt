@@ -1,5 +1,55 @@
-./game_of_life --pattern glider --rows 160 --cols 200
-./game_of_life --pattern blinker --rows 160 --cols 200 --delay 300
-./game_of_life --pattern pulsar --rows 160 --cols 200 --delay 150
-./game_of_life --pattern gosper --rows 160 --cols 200 --gens 500
-./game_of_life --pattern random --rows 256 --cols 512 --seed 123
+============================================================
+  JOGO DA VIDA DE CONWAY — COMANDOS PRINCIPAIS
+============================================================
+
+REGRA BASE: GHOST <= ROWS / PROCS
+  Com --ghost 5 e --procs 16, use --rows >= 80 (recomendado 160)
+
+------------------------------------------------------------
+PADRÕES EMBUTIDOS
+------------------------------------------------------------
+
+Glider (padrão):
+  ./game_of_life --rows 160 --cols 256 --ghost 5 --procs 16 --pattern glider
+
+Blinker:
+  ./game_of_life --rows 160 --cols 256 --ghost 5 --procs 16 --pattern blinker
+
+Pulsar:
+  ./game_of_life --rows 160 --cols 256 --ghost 5 --procs 16 --pattern pulsar
+
+Gosper Glider Gun:
+  ./game_of_life --rows 160 --cols 256 --ghost 5 --procs 16 --pattern gosper
+
+Aleatório (com semente):
+  ./game_of_life --rows 160 --cols 256 --ghost 5 --procs 16 --pattern random --seed 42
+
+------------------------------------------------------------
+BENCHMARK (sem animação)
+------------------------------------------------------------
+
+  ./game_of_life --rows 160 --cols 256 --ghost 5 --procs 16 --pattern random --no-display --gens 500
+
+------------------------------------------------------------
+AJUSTANDO VELOCIDADE E GERAÇÕES
+------------------------------------------------------------
+
+Mais lento (200ms entre frames):
+  ./game_of_life --rows 160 --cols 256 --ghost 5 --procs 16 --delay 200
+
+Mais rápido (20ms entre frames):
+  ./game_of_life --rows 160 --cols 256 --ghost 5 --procs 16 --delay 20
+
+Mais gerações:
+  ./game_of_life --rows 160 --cols 256 --ghost 5 --procs 16 --gens 1000
+
+------------------------------------------------------------
+REFERÊNCIAS DE PADRÕES INTERESSANTES
+------------------------------------------------------------
+
+  - gosper  → Gosper Glider Gun (gera gliders infinitamente)
+  - pulsar  → Oscilador de período 3
+  - glider  → Planador clássico
+  - random  → Grade aleatória (bom para benchmark)
+
+============================================================
