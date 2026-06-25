@@ -3,17 +3,6 @@
  *  Jogo da Vida de Conway — Paralelismo com Múltiplos Processos e Ghost Cells
  * ============================================================================
  *
- *  Conversão de C++ para C puro (C11).
- *
- *  Mudanças principais:
- *   - std::vector          → arrays dinâmicos (malloc/free)
- *   - std::thread          → pthreads
- *   - std::barrier (C++20) → pthread_barrier_t
- *   - std::atomic<int>     → _Atomic int  (C11)
- *   - std::string          → char* / char[]
- *   - std::swap            → troca manual de ponteiros
- *   - Lambdas / auto       → funções estáticas comuns
- *
  *  COMPILAÇÃO
  *  ──────────
  *    gcc -O2 -std=c11 -pthread -o game_of_life game_of_life.c
